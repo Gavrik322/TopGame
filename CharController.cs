@@ -12,6 +12,7 @@ public class CharController : MonoBehaviour
     private float groundRadius = 1.5f;
     public LayerMask whatIsGround;
     private float dooble = 2f;
+    dima xyi
     
     
 
