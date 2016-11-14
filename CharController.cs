@@ -11,7 +11,7 @@ public class CharController : MonoBehaviour
     public Transform groundCheck;
     private float groundRadius = 1.5f;
     public LayerMask whatIsGround;
-    private float dooble = 2f;
+    private float doubleJump = 2f;
 
     
     
@@ -42,18 +42,17 @@ public class CharController : MonoBehaviour
 
     public void Update(bool isJump)
     {
-
+        
         if (Ground == true)
-
         {
-            dooble = 2f;
+            doubleJump = 2f;
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
         }
-        else
-            if (dooble >= 2f)
+        else                                /*Двойной прыжок */
+            if (doubleJump >= 2f)
         {
-            dooble--;
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
+            doubleJump--;
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);  
         }
     }
 
